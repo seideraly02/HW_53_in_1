@@ -1,0 +1,38 @@
+@model User
+
+@{
+    ViewBag.Title = "Добавление пользователья";
+    Layout = "_Layout";
+}
+
+<h2>Запольните форму для добавления пользователя</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" asp-controller="Users">
+            <div class="form_row">
+                <label for="">
+                    Имя
+                    <input name="Name" type="text">
+                </label>
+            </div>
+            <div class="form_row">
+                <label for="">
+                    возрост
+                    <input name="Age" type="text">
+                </label>
+            </div>
+            <div class="from_row">
+                <label for="">
+                    Пол
+                    <select name="Sex" id="">
+                        <option value="0">Мужской</option>
+                        <option value="1">Женский</option>
+                    </select>
+                </label>
+            </div>
+            <input type="submit" value="создать">
+        </form>
+    </div>
+</div>
+§

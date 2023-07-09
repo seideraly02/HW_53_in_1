@@ -1,0 +1,24 @@
+@model List<User>
+
+@{
+    ViewBag.Title = "Пользователи";
+    Layout = "_Layout";
+}
+
+<h2>Список пользователей</h2>
+<a asp-action="Create" asp-controller="Users">Добавть нового</a>
+@foreach (var user in Model)
+{
+    <p>Имя- @user.Name</p>
+    <p>Возраст- @user.Age</p>
+    <p>Пол- 
+        @if (user.Sex == Sex.Man)
+        {
+            <span>Mужской</span>
+        }
+        else
+        {
+            <span>Женский</span>
+        }
+    </p>
+}
