@@ -20,7 +20,6 @@
                 <td>Название</td>
                 <td>Бренд</td>
                 <td>Стоймость</td>
-                <td>Действие</td>
                 <td>Данные</td>
                 <td>Описание</td>
             </tr>
@@ -31,7 +30,7 @@
                     <td>@phone.Name</td>
                     <td>@phone.Brand</td>
                     <td>@phone.Price</td>
-                    <td>@phone.Description</td>
+                    <td><a asp-action="Create" asp-controller="Description" asp-route-phoneId="@phone.Id">Описание</a></td>
                     <td><a asp-action="Create" asp-controller="Orders" asp-route-phoneId="@phone.Id">Заказать</a></td>
                 </tr>
             }

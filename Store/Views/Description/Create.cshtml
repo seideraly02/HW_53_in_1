@@ -1,0 +1,38 @@
+@model Description
+
+@{
+    ViewBag.Title = " cоздать описание";
+    Layout = "_Layout";
+}
+
+<h2>запаолните форму для создания описание</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" asp-controller = "Description"    method="post"></form>
+        <div class="form_row">
+            <label for="">
+                найменоване
+                <input asp-for="Name" type="text">
+            </label>
+            <label for="">
+                Цвет
+                <input asp-for="Color" type="text">
+            </label>
+            <label for="">
+                Процессор
+                <input asp-for="Processor" type="text">
+
+            </label>
+            <label for="">
+                Камера
+                <input asp-for="Camera" type="text">
+            </label>
+            <label for="">
+                Батарея
+                <input asp-for="Battery" type="text">
+            </label>
+        </div>
+        <button type="submit">сохранить</button>
+    </div>
+</div>
